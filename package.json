@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "start": "cross-env webpack --watch && webpack-dev-server"
+    "devserver": "webpack-dev-server",
+    "start": "concurrently \"npm:watch\" \"npm:devserver\""
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^1.0.1",
+    "concurrently": "^4.1.0",
     "copy-webpack-plugin": "^4.6.0",
     "cross-env": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
