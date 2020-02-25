@@ -1,3 +1,5 @@
+import './styles';
+
 export class App {
     title = 'Hello world';
 
